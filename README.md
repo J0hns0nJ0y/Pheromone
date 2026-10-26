@@ -132,6 +132,3 @@ What does NOT make you anonymous:
 | Connection hangs at first | The free Render server was asleep. Wait up to a minute. |
 | Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in `.onrender.com`, no trailing slash). |
 
-## License
-
-Add the license of your choice here.
