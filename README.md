@@ -1,5 +1,3 @@
-# Pheromone
-
 [![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/pheromone.gif)](https://johnsonjoy.vercel.app/)
 
 Pheromone is a tiny, temporary, command-line chat written in Python.
