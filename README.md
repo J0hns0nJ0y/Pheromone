@@ -1,14 +1,14 @@
 [![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/pheromone.gif)]()
 
-Pheromone is a tiny, temporary, command-line chat written in Python.
+Pheromone is a tiny, temporary, command-line chat which can be used anytime and anywhere.
 
 You create a one-time **room code**, give it to one person together with the `client.py` file and a time to show up. At that time you both run the client, enter the code, and chat inside your terminals. When either of you closes the terminal, the conversation is gone. Nothing is written to disk or to a database.
 
-## How it works
+## ⚙️ How it works
 
 ```
  you (client.py) ──┐
-                   ├──>  relay server (server.py, hosted on Render)  <── checks codes against a hosted codes.json (GitHub Gist)
+                   ├──>  relay server (server.py, hosted on web service provider)  <── checks codes against a hosted codes.json (GitHub Gist)
  them (client.py) ─┘
 ```
 
@@ -67,11 +67,10 @@ Make a new code for every chat and never reuse one.
    ```
    This version always shows your latest edit. This is your **CODES_URL**.
 
-## Step 4: Deploy the server on Render
+## Step 4: Deploy the server
 
 1. Create a new GitHub repo (private is fine) and upload `server.py` and `requirements.txt` (which contains the single line `websockets`).
-2. Sign up at <https://render.com> with your GitHub account.
-3. Click **New**, then **Web Service**, and pick your repo.
+2. Pick your repo on the web service provider.
 4. Use these settings:
    - **Runtime:** Python
    - **Build Command:** `pip install -r requirements.txt`
@@ -81,21 +80,21 @@ Make a new code for every chat and never reuse one.
    - **Key:** `CODES_URL`
    - **Value:** your raw Gist URL from Step 3
 6. Click **Create Web Service** and wait until it says **Live**.
-7. Copy the address at the top, for example `https://my-pheromone.onrender.com`.
+7. Copy the address at the top, for example `https://my-pheromone.webservicer.com`.
 
 ## Step 5: Update `client.py`
 
 Open `client.py` and find this line near the top:
 
 ```python
-SERVER = "wss://yourhost.onrender.com"
+SERVER = "wss://yourhost.webservice.com"
 ```
 
-Replace it with your own Render address. Use `wss://` (not `https://`).
+Replace it with your own hosted address. Use `wss://` (not `https://`).
 
 Then send this edited `client.py` to your recipient. They need Python 3.10+ and must run `pip install -U websockets` once.
 
-## Chatting anonymously
+## 🥷🏻 Chatting anonymously
 
 Pheromone is designed to leave no trace on your devices, but be realistic about what "anonymous" means here.
 
@@ -109,19 +108,19 @@ What helps:
 
 What does NOT make you anonymous:
 
-- **The server operator can see traffic.** Whoever runs the relay (you) can technically see messages passing through and the IP addresses of both clients. Render also keeps its own infrastructure logs. If you want the content hidden even from the server, you would have to add end-to-end encryption, which Pheromone does not do.
+- **The server operator can see traffic.** Whoever runs the relay (you) can technically see messages passing through and the IP addresses of both clients. If you want the content hidden even from the server, you would have to add end-to-end encryption, which Pheromone does not do.
 - **IP addresses are visible** to the host. For stronger network anonymity, both people can use a VPN or Tor, which is outside the scope of this project.
 - **Screenshots, copy/paste, and terminal scrollback** cannot be controlled by this tool. "Gone" means "not stored by Pheromone", not "unrecoverable".
 - **Anyone who learns the room code while it is active** can try to join. Rooms are limited to 2 people, and the server shows a "joined" message for each connection, so watch for unexpected joins and share the code only over a channel you trust. Codes should be long and random (the generator makes 12 characters from letters and digits using Python's `secrets` module).
 
-## Security notes
+## 🐜 Security notes
 
 - The server checks codes itself, so a modified `client.py` cannot skip verification.
 - Repeated wrong codes from one IP are rate limited.
 - Never put secrets in this public repo or in `client.py`. The client only needs the server address.
 - Never reuse a room code.
 
-## Troubleshooting
+## ⚠️ Troubleshooting
 
 | Problem | Likely cause |
 |---|---|
@@ -129,11 +128,14 @@ What does NOT make you anonymous:
 | `ERR server could not check codes` | `CODES_URL` is wrong. Make sure it starts with `gist.githubusercontent.com` and ends with `/raw/codes.json`. |
 | `ERR room full` | Two people are already in that room. |
 | `ERR too many attempts` | Too many wrong codes from your IP. Wait about 5 minutes. |
-| Connection hangs at first | The free Render server was asleep. Wait up to a minute. |
-| Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in `.onrender.com`, no trailing slash). |
+| Connection hangs at first | The server was asleep. Wait up to a minute. |
+| Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in URL, no trailing slash). |
+
+## 🫱🏼‍🫲🏼 Contribute
 
 [![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/contribute.gif)]()
 
+_# Reach Me Out on Telegram @maisogov, If you want me to setup your custom anonymous relay and plan execution._
 ```shell              
       _,-'\   /|   .    .    /`.
   _,-'     \_/_|_  |\   |`. /   `._,--===--.__
@@ -145,7 +147,7 @@ What does NOT make you anonymous:
        //  `""\\      |   \            \
        \|     |/      /    \            \
                      /     |             `.
-                    /      |               ^
-                   ^       |
+                    ^      |               ^
                            ^
 ```
+<p align="center"><sub><i>Built With 💗 For Anonymity Using Python</i></sub></p>
