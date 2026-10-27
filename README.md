@@ -131,7 +131,8 @@ What does NOT make you anonymous:
 | Connection hangs at first | The server was asleep. Wait up to a minute. |
 | Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in URL, no trailing slash). |
 
-## 🫱🏼‍🫲🏼 Contribute
+---
+_🫱🏼‍🫲🏼 Raise a Issue or a Pull Request._
 
 [![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/contribute.gif)]()
 
