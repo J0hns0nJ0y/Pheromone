@@ -132,3 +132,18 @@ What does NOT make you anonymous:
 | Connection hangs at first | The free Render server was asleep. Wait up to a minute. |
 | Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in `.onrender.com`, no trailing slash). |
 
+```shell              
+      _,-'\   /|   .    .    /`.
+  _,-'     \_/_|_  |\   |`. /   `._,--===--.__
+ ^       _/"/  " \ : \__|_ /.   ,'    :.  :. .`-._
+        // ^   /7 t'""    "`-._/ ,'\   :   :  :  .`.                                           P H E R O M O N E : Type & Disappear
+        Y      L/ )\         ]],'   \  :   :  :   : `.                                                ( Inspired by Ants )
+        |        /  `.n_n_n,','\_    \ ;   ;  ;   ;  _>                                        @J0hns0nJ0y
+        |__    ,'     |  \`-'    `-.__\_______.==---'
+       //  `""\\      |   \            \
+       \|     |/      /    \            \
+                     /     |             `.
+                    /      |               ^
+                   ^       |
+                           ^
+```
