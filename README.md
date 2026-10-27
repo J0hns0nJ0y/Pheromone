@@ -1,4 +1,4 @@
-[![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/pheromone.gif)](https://johnsonjoy.vercel.app/)
+[![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/pheromone.gif)]()
 
 Pheromone is a tiny, temporary, command-line chat written in Python.
 
@@ -131,6 +131,8 @@ What does NOT make you anonymous:
 | `ERR too many attempts` | Too many wrong codes from your IP. Wait about 5 minutes. |
 | Connection hangs at first | The free Render server was asleep. Wait up to a minute. |
 | Connection refused / cannot connect | The server is suspended, or `SERVER` in `client.py` is wrong (check `wss://`, the dot in `.onrender.com`, no trailing slash). |
+
+[![](https://raw.githubusercontent.com/J0hns0nJ0y/Pheromone/master/contribute.gif)]()
 
 ```shell              
       _,-'\   /|   .    .    /`.
