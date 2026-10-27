@@ -2,7 +2,21 @@ import asyncio, getpass, json, os, sys
 from websockets.asyncio.client import connect
 
 SERVER = "wss://yourpage.onrender.com"      # change to your host after deploying
-
+BANNER = r"""
+      _,-'\   /|   .    .    /`.
+  _,-'     \_/_|_  |\   |`. /   `._,--===--.__
+ ^       _/"/  " \ : \__|_ /.   ,'    :.  :. .`-._
+        // ^   /7 t'""    "`-._/ ,'\   :   :  :  .`.                                           P H E R O M O N E : Type & Disappear
+        Y      L/ )\         ]],'   \  :   :  :   : `.                                                ( Inspired by Ants )
+        |        /  `.n_n_n,','\_    \ ;   ;  ;   ;  _>                                        @J0hns0nJ0y
+        |__    ,'     |  \`-'    `-.__\_______.==---'
+       //  `""\\      |   \            \
+       \|     |/      /    \            \
+                     /     |             `.
+                    ^      |               ^
+                           ^
+"""
+print(BANNER)
 async def main():
     code = getpass.getpass("Room code: ").strip()
     name = input("Your name: ").strip() or "guest"
