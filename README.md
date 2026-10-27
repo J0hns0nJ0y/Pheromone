@@ -141,9 +141,9 @@ _# Reach Me Out on Telegram @maisogov, If you want me to setup your custom anony
       _,-'\   /|   .    .    /`.
   _,-'     \_/_|_  |\   |`. /   `._,--===--.__
  ^       _/"/  " \ : \__|_ /.   ,'    :.  :. .`-._
-        // ^   /7 t'""    "`-._/ ,'\   :   :  :  .`.                   P H E R O M O N E : Type & Disappear
-        Y      L/ )\         ]],'   \  :   :  :   : `.                        ( Inspired by Ants )
-        |        /  `.n_n_n,','\_    \ ;   ;  ;   ;  _>                 @J0hns0nJ0y
+        // ^   /7 t'""    "`-._/ ,'\   :   :  :  .`.              P H E R O M O N E : Type & Disappear
+        Y      L/ )\         ]],'   \  :   :  :   : `.                   ( Inspired by Ants )
+        |        /  `.n_n_n,','\_    \ ;   ;  ;   ;  _>           @J0hns0nJ0y
         |__    ,'     |  \`-'    `-.__\_______.==---'
        //  `""\\      |   \            \
        \|     |/      /    \            \
